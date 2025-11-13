@@ -1,0 +1,21 @@
+# 默认角色数据
+roles:
+  - code: "admin"
+    name: "超级管理员"
+    description: "拥有系统所有权限，可管理用户、角色、菜单、权限"
+    is_active: true
+
+  - code: "user"
+    name: "普通用户"
+    description: "普通用户，可查看订单、管理个人信息"
+    is_active: true
+
+  - code: "editor"
+    name: "编辑员"
+    description: "可编辑内容，管理订单，但无系统管理权限"
+    is_active: true
+
+  - code: "viewer"
+    name: "访客"
+    description: "只读权限，可查看但不能修改"
+    is_active: true

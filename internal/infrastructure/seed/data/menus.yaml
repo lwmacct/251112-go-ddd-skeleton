@@ -1,0 +1,92 @@
+# 默认菜单数据（支持两层树形结构）
+menus:
+  # 一级目录：系统管理
+  - fixed_id: "MENU_SYSTEM"
+    name: "系统管理"
+    path: "/system"
+    icon: "setting"
+    type: "dir"
+    parent_id: null
+    sort_order: 0
+    is_visible: true
+    component: ""
+    permission: ""
+    description: "系统管理模块"
+
+  # 二级菜单：用户管理
+  - fixed_id: "MENU_SYSTEM_USER"
+    name: "用户管理"
+    path: "/system/users"
+    icon: "user"
+    type: "menu"
+    parent_id: "MENU_SYSTEM"
+    sort_order: 0
+    is_visible: true
+    component: "system/users/index"
+    permission: "user:read"
+    description: "用户账户管理"
+
+  # 二级菜单：角色管理
+  - fixed_id: "MENU_SYSTEM_ROLE"
+    name: "角色管理"
+    path: "/system/roles"
+    icon: "team"
+    type: "menu"
+    parent_id: "MENU_SYSTEM"
+    sort_order: 1
+    is_visible: true
+    component: "system/roles/index"
+    permission: "role:read"
+    description: "角色权限管理"
+
+  # 二级菜单：菜单管理
+  - fixed_id: "MENU_SYSTEM_MENU"
+    name: "菜单管理"
+    path: "/system/menus"
+    icon: "menu"
+    type: "menu"
+    parent_id: "MENU_SYSTEM"
+    sort_order: 2
+    is_visible: true
+    component: "system/menus/index"
+    permission: "menu:read"
+    description: "菜单结构管理"
+
+  # 二级菜单：权限管理
+  - fixed_id: "MENU_SYSTEM_PERMISSION"
+    name: "权限管理"
+    path: "/system/permissions"
+    icon: "lock"
+    type: "menu"
+    parent_id: "MENU_SYSTEM"
+    sort_order: 3
+    is_visible: true
+    component: "system/permissions/index"
+    permission: "permission:read"
+    description: "权限点管理"
+
+  # 一级菜单：订单管理
+  - fixed_id: "MENU_ORDER"
+    name: "订单管理"
+    path: "/orders"
+    icon: "shopping-cart"
+    type: "menu"
+    parent_id: null
+    sort_order: 1
+    is_visible: true
+    component: "orders/index"
+    permission: "order:read"
+    description: "订单管理模块"
+
+  # 一级菜单：个人中心
+  - fixed_id: "MENU_PROFILE"
+    name: "个人中心"
+    path: "/profile"
+    icon: "user-circle"
+    type: "menu"
+    parent_id: null
+    sort_order: 2
+    is_visible: true
+    component: "profile/index"
+    permission: ""
+    description: "个人信息管理"

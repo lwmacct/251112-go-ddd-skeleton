@@ -1,0 +1,43 @@
+# 角色-权限关联数据
+role_permissions:
+  # admin 拥有所有权限
+  admin:
+    - "user:create"
+    - "user:read"
+    - "user:update"
+    - "user:delete"
+    - "role:create"
+    - "role:read"
+    - "role:update"
+    - "role:delete"
+    - "menu:create"
+    - "menu:read"
+    - "menu:update"
+    - "menu:delete"
+    - "permission:read"
+    - "order:create"
+    - "order:read"
+    - "order:update"
+    - "order:delete"
+
+  # editor 编辑权限
+  editor:
+    - "user:read"
+    - "role:read"
+    - "menu:read"
+    - "order:create"
+    - "order:read"
+    - "order:update"
+
+  # user 基础权限
+  user:
+    - "order:create"
+    - "order:read"
+
+  # viewer 只读权限
+  viewer:
+    - "user:read"
+    - "role:read"
+    - "menu:read"
+    - "permission:read"
+    - "order:read"

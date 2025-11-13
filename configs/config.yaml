@@ -1,0 +1,48 @@
+# 应用配置
+app:
+  name: "Go DDD Skeleton"
+  env: "development"
+  debug: true
+  log_level: "debug"
+
+# 服务器配置
+server:
+  host: "0.0.0.0"
+  port: 8080
+  env: "development"
+
+# 数据库配置
+database:
+  host: "localhost"
+  port: 5432
+  user: "postgres"
+  password: "postgres"
+  dbname: "go_ddd_skeleton"
+  sslmode: "disable"
+
+# Redis配置
+redis:
+  host: "localhost"
+  port: 6379
+  password: ""
+  db: 0
+
+# JWT配置
+jwt:
+  secret: "your-secret-key-change-this-in-production"
+  access_token_expiry: 15m  # 15分钟
+  refresh_token_expiry: 168h # 7天
+
+# 邮件配置
+email:
+  smtp_host: "smtp.gmail.com"
+  smtp_port: 587
+  smtp_username: "your-email@gmail.com"
+  smtp_password: "your-password"
+  smtp_from: "noreply@example.com"
+
+# 支付配置
+payment:
+  stripe_secret_key: "sk_test_your-stripe-secret-key"
+  stripe_publishable_key: "pk_test_your-stripe-publishable-key"
+

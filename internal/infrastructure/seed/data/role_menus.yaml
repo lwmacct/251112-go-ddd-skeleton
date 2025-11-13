@@ -1,0 +1,30 @@
+# 角色-菜单关联数据
+role_menus:
+  # admin 可见所有菜单
+  admin:
+    - "MENU_SYSTEM"
+    - "MENU_SYSTEM_USER"
+    - "MENU_SYSTEM_ROLE"
+    - "MENU_SYSTEM_MENU"
+    - "MENU_SYSTEM_PERMISSION"
+    - "MENU_ORDER"
+    - "MENU_PROFILE"
+
+  # editor 可见部分管理菜单
+  editor:
+    - "MENU_SYSTEM"
+    - "MENU_SYSTEM_USER"
+    - "MENU_ORDER"
+    - "MENU_PROFILE"
+
+  # user 只能看到业务菜单
+  user:
+    - "MENU_ORDER"
+    - "MENU_PROFILE"
+
+  # viewer 只读菜单
+  viewer:
+    - "MENU_SYSTEM"
+    - "MENU_SYSTEM_USER"
+    - "MENU_SYSTEM_ROLE"
+    - "MENU_ORDER"
