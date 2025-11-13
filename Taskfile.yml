@@ -1,7 +1,7 @@
 # https://taskfile.dev
 
 version: "3"
-dotenv: [".env", ".taskfile/.env", "{{.HOME}}/.env", ".taskfile/.env.template"]
+dotenv: [".env", ".taskfile/.env", "{{.HOME}}/.env", ".taskfile/.env.example"]
 
 includes:
   env:
