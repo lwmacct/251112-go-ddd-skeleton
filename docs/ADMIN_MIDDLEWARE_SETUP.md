@@ -23,10 +23,12 @@ RoleRepository (基础设施层)
 ### 组件说明
 
 1. **RoleChecker 接口** (`internal/adapters/http/middleware/admin.go`)
+
    - 定义角色检查的抽象接口
    - 与领域层解耦
 
 2. **rbacRoleChecker 实现** (`internal/adapters/http/middleware/role_checker.go`)
+
    - 实现 RoleChecker 接口
    - 桥接中间件和 RBAC 领域服务
    - 将 userID 转换为角色检查逻辑
@@ -155,13 +157,13 @@ admin.Use(middleware.Auth(), middleware.Admin())
 
 ### 错误流程
 
-| 场景 | HTTP 状态码 | 错误信息 |
-|------|------------|---------|
-| 未提供 JWT Token | 401 | Unauthorized |
-| JWT Token 无效 | 401 | Unauthorized |
-| 用户没有 admin 角色 | 403 | Forbidden |
-| RoleChecker 未配置 | 403 | Forbidden |
-| 数据库查询失败 | 403 | Forbidden |
+| 场景                | HTTP 状态码 | 错误信息     |
+| ------------------- | ----------- | ------------ |
+| 未提供 JWT Token    | 401         | Unauthorized |
+| JWT Token 无效      | 401         | Unauthorized |
+| 用户没有 admin 角色 | 403         | Forbidden    |
+| RoleChecker 未配置  | 403         | Forbidden    |
+| 数据库查询失败      | 403         | Forbidden    |
 
 ## 测试方法
 
