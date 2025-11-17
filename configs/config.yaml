@@ -30,7 +30,7 @@ redis:
 # JWT配置
 jwt:
   secret: "your-secret-key-change-this-in-production"
-  access_token_expiry: 15m  # 15分钟
+  access_token_expiry: 15m # 15分钟
   refresh_token_expiry: 168h # 7天
 
 # 邮件配置
@@ -45,4 +45,3 @@ email:
 payment:
   stripe_secret_key: "sk_test_your-stripe-secret-key"
   stripe_publishable_key: "pk_test_your-stripe-publishable-key"
-

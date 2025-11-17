@@ -96,6 +96,7 @@ go run main.go migrate status
 ```
 
 **默认管理员账户**：
+
 - Email: `admin@example.com`
 - Password: `Admin@123456`
 
@@ -202,6 +203,7 @@ go build -o bin/migrate cmd/migrate/main.go
 ### RBAC 权限管理接口
 
 #### 菜单管理
+
 - `GET /api/menus/user/tree` - 获取当前用户菜单树（前端侧边栏）
 - `POST /api/admin/menus` - 创建菜单
 - `PUT /api/admin/menus/:id` - 更新菜单
@@ -210,6 +212,7 @@ go build -o bin/migrate cmd/migrate/main.go
 - `PUT /api/admin/menus/order` - 更新菜单排序
 
 #### 角色管理
+
 - `POST /api/admin/roles` - 创建角色
 - `PUT /api/admin/roles/:id` - 更新角色
 - `DELETE /api/admin/roles/:id` - 删除角色
@@ -217,12 +220,14 @@ go build -o bin/migrate cmd/migrate/main.go
 - `GET /api/admin/roles` - 列出所有角色
 
 #### 角色权限关联
+
 - `POST /api/admin/roles/:roleId/permissions` - 为角色分配权限
 - `GET /api/admin/roles/:roleId/permissions` - 获取角色权限列表
 - `POST /api/admin/roles/:roleId/menus` - 为角色分配菜单
 - `GET /api/admin/roles/:roleId/menus` - 获取角色菜单树
 
 #### 用户角色管理
+
 - `POST /api/admin/users/:userId/roles/:roleId` - 为用户分配角色
 - `DELETE /api/admin/users/:userId/roles/:roleId` - 移除用户角色
 - `GET /api/admin/users/:userId/roles` - 获取用户角色列表
@@ -297,8 +302,9 @@ go build -o bin/migrate cmd/migrate/main.go
 ### 默认数据
 
 执行 `seed` 命令后将自动创建：
+
 - **4 个角色**: admin, user, editor, viewer
-- **17 个权限**: user:*, role:*, menu:*, order:*, permission:read
+- **17 个权限**: user:_, role:_, menu:_, order:_, permission:read
 - **7 个菜单**: 系统管理（含 4 个子菜单）、订单管理、个人中心
 - **1 个管理员**: admin@example.com / Admin@123456
 
